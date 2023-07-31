@@ -1,3 +1,4 @@
+
 export const tokens = {
   grey: {
     100: "#f0f0f3",
@@ -43,6 +44,16 @@ export const tokens = {
     default: "#1f2026",
   },
 };
+
+declare module '@mui/material/styles/createPalette' {
+  interface PaletteColor {
+    [key: number]: string;
+  }
+
+  interface Palette {
+    tertiary: PaletteColor;
+  }
+}
 
 // mui theme settings
 export const themeSettings = {
